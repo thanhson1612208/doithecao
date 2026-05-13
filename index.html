@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DịchVụThẻCào – Đổi Thẻ Cào Nhanh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">💳</span>
+    <span class="brand-name">DịchVụThẻCào</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#hero">Trang chủ</a>
+    <a href="#how-it-works">Cách dùng</a>
+    <a href="#rates">Tỷ giá</a>
+    <a href="#contact">Liên hệ</a>
+  </div>
+  <div class="nav-actions">
+    <button class="btn-outline" onclick="openModal('loginModal')">Đăng nhập</button>
+    <button class="btn-primary" onclick="openModal('registerModal')">Đăng ký</button>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🔥 Đổi thẻ nhanh trong 1–3 phút</div>
+    <h1 class="hero-title">
+      Đổi <span class="gradient-text">Thẻ Cào</span><br/>Thành Tiền Mặt
+    </h1>
+    <p class="hero-sub">Tỷ lệ cao – Xử lý tự động – Bảo mật tuyệt đối.<br/>Hỗ trợ Viettel, Mobifone, Vinaphone, Vietnamobile.</p>
+    <div class="hero-btns">
+      <button class="btn-hero-primary" onclick="openModal('registerModal')">Đổi Thẻ Ngay</button>
+      <button class="btn-hero-outline" onclick="scrollTo('how-it-works')">Xem cách dùng</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Khách hàng</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">99.9%</span><span class="stat-label">Thành công</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">2 phút</span><span class="stat-label">Xử lý</span></div>
+    </div>
+  </div>
+  <div class="hero-card-demo">
+    <div class="card-float card-viettel">
+      <i class="fas fa-sim-card"></i>
+      <span>Viettel</span>
+      <strong>500,000đ</strong>
+    </div>
+    <div class="arrow-float"><i class="fas fa-arrow-right"></i></div>
+    <div class="card-float card-money">
+      <i class="fas fa-university"></i>
+      <span>Tài khoản NH</span>
+      <strong>460,000đ</strong>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK LOGOS -->
+<section class="networks">
+  <p class="networks-label">Hỗ trợ nhà mạng</p>
+  <div class="networks-logos">
+    <div class="net-logo viettel">Viettel</div>
+    <div class="net-logo mobi">Mobifone</div>
+    <div class="net-logo vina">Vinaphone</div>
+    <div class="net-logo vnm">Vietnamobile</div>
+    <div class="net-logo gmobile">Gmobile</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-header">
+    <span class="section-tag">Quy trình</span>
+    <h2>Chỉ 3 bước đơn giản</h2>
+    <p>Hoàn toàn tự động, không cần chờ đợi lâu</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+      <h3>Đăng ký & Đăng nhập</h3>
+      <p>Tạo tài khoản miễn phí và thêm thông tin tài khoản ngân hàng nhận tiền</p>
+    </div>
+    <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+      <h3>Nhập thông tin thẻ</h3>
+      <p>Chọn nhà mạng, mệnh giá, nhập serial và mã thẻ cào của bạn</p>
+    </div>
+    <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fas fa-money-bill-wave"></i></div>
+      <h3>Nhận tiền về tài khoản</h3>
+      <p>Tiền được chuyển vào ngân hàng trong 1–3 phút sau khi xác nhận</p>
+    </div>
+  </div>
+</section>
+
+<!-- RATES -->
+<section class="rates" id="rates">
+  <div class="section-header">
+    <span class="section-tag">Tỷ lệ đổi</span>
+    <h2>Tỷ lệ cạnh tranh nhất thị trường</h2>
+    <p>Cập nhật theo thời gian thực</p>
+  </div>
+  <div class="rates-table-wrapper">
+    <table class="rates-table">
+      <thead>
+        <tr>
+          <th>Mệnh giá</th>
+          <th><span class="net-badge viettel-b">Viettel</span></th>
+          <th><span class="net-badge mobi-b">Mobifone</span></th>
+          <th><span class="net-badge vina-b">Vinaphone</span></th>
+          <th><span class="net-badge vnm-b">Vietnamobile</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>10,000đ</td><td>85%</td><td>83%</td><td>83%</td><td>78%</td></tr>
+        <tr><td>20,000đ</td><td>87%</td><td>85%</td><td>85%</td><td>80%</td></tr>
+        <tr><td>50,000đ</td><td>89%</td><td>87%</td><td>87%</td><td>83%</td></tr>
+        <tr><td>100,000đ</td><td>91%</td><td>89%</td><td>89%</td><td>85%</td></tr>
+        <tr><td>200,000đ</td><td>92%</td><td>90%</td><td>90%</td><td>87%</td></tr>
+        <tr class="highlight-row"><td>500,000đ</td><td><strong>93%</strong></td><td><strong>91%</strong></td><td><strong>91%</strong></td><td><strong>88%</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h2>Liên hệ hỗ trợ</h2>
+      <p>Đội ngũ hỗ trợ 24/7, sẵn sàng giúp bạn mọi lúc</p>
+      <div class="contact-items">
+        <a href="https://t.me/dichvuthecao" class="contact-item"><i class="fab fa-telegram"></i> Telegram: @dichvuthecao</a>
+        <a href="#" class="contact-item"><i class="fab fa-facebook"></i> Facebook: DịchVụThẻCào</a>
+        <a href="mailto:support@dichvuthecao.vn" class="contact-item"><i class="fas fa-envelope"></i> support@dichvuthecao.vn</a>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <div class="cta-box">
+        <h3>Sẵn sàng đổi thẻ?</h3>
+        <p>Đăng ký ngay và nhận ưu đãi tỷ lệ cao lần đầu!</p>
+        <button class="btn-primary btn-lg" onclick="openModal('registerModal')">Tạo Tài Khoản Miễn Phí</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-icon">💳</span>
+      <span class="brand-name">DịchVụThẻCào</span>
+    </div>
+    <p class="footer-copy">© 2025 DịchVụThẻCào. Bảo lưu mọi quyền.</p>
+    <div class="footer-links">
+      <a href="#">Điều khoản</a>
+      <a href="#">Chính sách</a>
+      <a href="#">Bảo mật</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('loginModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-logo"><span>💳</span> DịchVụThẻCào</div>
+    <h2 class="modal-title">Đăng nhập</h2>
+    <div id="loginError" class="alert alert-error" style="display:none"></div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="email@example.com" />
+    </div>
+    <div class="form-group">
+      <label>Mật khẩu</label>
+      <input type="password" id="loginPassword" placeholder="••••••••" />
+    </div>
+    <button class="btn-primary btn-full" onclick="doLogin()">Đăng nhập</button>
+    <p class="modal-switch">Chưa có tài khoản? <a onclick="switchModal('loginModal','registerModal')">Đăng ký ngay</a></p>
+  </div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div class="modal-overlay" id="registerModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('registerModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-logo"><span>💳</span> DịchVụThẻCào</div>
+    <h2 class="modal-title">Tạo tài khoản</h2>
+    <div id="registerError" class="alert alert-error" style="display:none"></div>
+    <div id="registerSuccess" class="alert alert-success" style="display:none"></div>
+    <div class="form-group">
+      <label>Họ và tên</label>
+      <input type="text" id="regName" placeholder="Nguyễn Văn A" />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="regEmail" placeholder="email@example.com" />
+    </div>
+    <div class="form-group">
+      <label>Số điện thoại</label>
+      <input type="tel" id="regPhone" placeholder="0912345678" />
+    </div>
+    <div class="form-group">
+      <label>Mật khẩu</label>
+      <input type="password" id="regPassword" placeholder="Tối thiểu 6 ký tự" />
+    </div>
+    <button class="btn-primary btn-full" onclick="doRegister()">Đăng ký</button>
+    <p class="modal-switch">Đã có tài khoản? <a onclick="switchModal('registerModal','loginModal')">Đăng nhập</a></p>
+  </div>
+</div>
+
+<!-- DASHBOARD MODAL (after login) -->
+<div class="modal-overlay" id="dashboardModal">
+  <div class="modal modal-dashboard">
+    <button class="modal-close" onclick="doLogout()"><i class="fas fa-sign-out-alt"></i></button>
+    
+    <!-- TABS -->
+    <div class="dash-tabs">
+      <button class="dash-tab active" onclick="switchTab('tabExchange')"><i class="fas fa-exchange-alt"></i> Đổi Thẻ</button>
+      <button class="dash-tab" onclick="switchTab('tabBank')"><i class="fas fa-university"></i> Ngân Hàng</button>
+      <button class="dash-tab" onclick="switchTab('tabHistory')"><i class="fas fa-history"></i> Lịch Sử</button>
+    </div>
+
+    <!-- TAB: ĐỔI THẺ -->
+    <div class="tab-content active" id="tabExchange">
+      <h3>Đổi thẻ cào</h3>
+      <div id="exchangeAlert" class="alert" style="display:none"></div>
+      <div class="form-group">
+        <label>Nhà mạng</label>
+        <select id="network">
+          <option value="">-- Chọn nhà mạng --</option>
+          <option value="viettel">Viettel</option>
+          <option value="mobifone">Mobifone</option>
+          <option value="vinaphone">Vinaphone</option>
+          <option value="vietnamobile">Vietnamobile</option>
+          <option value="gmobile">Gmobile</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mệnh giá</label>
+        <select id="denomination">
+          <option value="">-- Chọn mệnh giá --</option>
+          <option value="10000">10,000đ</option>
+          <option value="20000">20,000đ</option>
+          <option value="50000">50,000đ</option>
+          <option value="100000">100,000đ</option>
+          <option value="200000">200,000đ</option>
+          <option value="500000">500,000đ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Serial thẻ</label>
+        <input type="text" id="serial" placeholder="Nhập số serial thẻ" />
+      </div>
+      <div class="form-group">
+        <label>Mã thẻ</label>
+        <input type="text" id="cardCode" placeholder="Nhập mã thẻ cào" />
+      </div>
+      <div class="form-group">
+        <label>Ngân hàng nhận tiền</label>
+        <select id="bankSelect">
+          <option value="">-- Chọn ngân hàng --</option>
+        </select>
+      </div>
+      <div class="rate-preview" id="ratePreview" style="display:none">
+        <div class="rate-row"><span>Mệnh giá:</span><strong id="previewDenom">-</strong></div>
+        <div class="rate-row"><span>Tỷ lệ:</span><strong id="previewRate">-</strong></div>
+        <div class="rate-row highlight"><span>Nhận được:</span><strong id="previewReceive">-</strong></div>
+      </div>
+      <button class="btn-primary btn-full" onclick="submitExchange()">Gửi yêu cầu đổi thẻ</button>
+    </div>
+
+    <!-- TAB: NGÂN HÀNG -->
+    <div class="tab-content" id="tabBank">
+      <h3>Quản lý ngân hàng</h3>
+      <div id="bankAlert" class="alert" style="display:none"></div>
+      <div class="form-group">
+        <label>Tên ngân hàng</label>
+        <select id="bankName">
+          <option value="">-- Chọn ngân hàng --</option>
+          <option>Vietcombank</option>
+          <option>Techcombank</option>
+          <option>BIDV</option>
+          <option>Agribank</option>
+          <option>VPBank</option>
+          <option>MB Bank</option>
+          <option>ACB</option>
+          <option>Sacombank</option>
+          <option>TPBank</option>
+          <option>SHB</option>
+          <option>HDBank</option>
+          <option>OCB</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Số tài khoản</label>
+        <input type="text" id="bankAccount" placeholder="Nhập số tài khoản" />
+      </div>
+      <div class="form-group">
+        <label>Tên chủ tài khoản</label>
+        <input type="text" id="bankHolder" placeholder="NGUYEN VAN A" />
+      </div>
+      <button class="btn-primary btn-full" onclick="addBankAccount()">Thêm ngân hàng</button>
+      <div class="bank-list" id="bankList">
+        <p class="empty-msg">Chưa có tài khoản ngân hàng nào</p>
+      </div>
+    </div>
+
+    <!-- TAB: LỊCH SỬ -->
+    <div class="tab-content" id="tabHistory">
+      <h3>Lịch sử giao dịch</h3>
+      <div class="history-list" id="historyList">
+        <p class="empty-msg">Chưa có giao dịch nào</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Firebase + App JS -->
+<script type="module" src="app.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
